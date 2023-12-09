@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
+
+    <!-- Раздел "Unbound" -->
+    <TextView
+            android:id="@+id/textUnbound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Unbound"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_centerHorizontal="true"/>
+
+    <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textUnbound"
+            android:text="Play Music" />
+
+    <TextView
+            android:id="@+id/textIntent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkbox"
+            android:text="Intent"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_centerHorizontal="true"/>
+
+    <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textIntent"
+            android:layout_marginTop="16dp"
+            android:text="Start" />
+
+    <Button
+            android:id="@+id/stopButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/startButton"
+            android:layout_marginTop="8dp"
+            android:text="Stop" />
+
+    <!-- Прогресс-бар -->
+    <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stopButton"
+            android:layout_marginTop="16dp"
+            android:max="5" />
+
+    <TextView
+            android:id="@+id/textBound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progressBar"
+            android:text="Bound"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_centerHorizontal="true"/>
+
+    <!-- Кнопки для работы с bound сервисом -->
+    <Button
+            android:id="@+id/getTimestampButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textBound"
+            android:layout_marginTop="16dp"
+            android:text="Get Timestamp" />
+
+    <Button
+            android:id="@+id/bindButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/getTimestampButton"
+            android:layout_marginTop="8dp"
+            android:text="Bind" />
+
+    <Button
+            android:id="@+id/unbindButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bindButton"
+            android:layout_marginTop="8dp"
+            android:text="Unbind" />
+
+    <!-- Панель вывода -->
+    <TextView
+            android:id="@+id/outputTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/unbindButton"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text=""
+            android:textSize="16sp" />
+
+</RelativeLayout>
